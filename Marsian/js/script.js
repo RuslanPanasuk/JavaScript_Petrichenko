@@ -33,3 +33,8 @@ adv.forEach(item => {
 const genre = document.querySelector('.promo__genre');
 
 genre.textContent = 'Драма';
+
+const promoBackground = document.querySelector('.promo__bg');
+
+promoBackground.style.backgroundImage = "url('./img/bg.jpg')";
+
