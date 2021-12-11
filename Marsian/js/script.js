@@ -38,3 +38,17 @@ const promoBackground = document.querySelector('.promo__bg');
 
 promoBackground.style.backgroundImage = "url('./img/bg.jpg')";
 
+const interactiveList = document.querySelector('.promo__interactive-list');
+const interactiveListItems = interactiveList.querySelectorAll('li');
+
+interactiveListItems.forEach(item => {
+    item.remove();
+});
+
+movieDB.movies.sort();
+
+movieDB.movies.forEach((item, i) => {
+    let newElem = `<li class="promo__interactive-item">${i+1} ${item}<div class="delete"></div></li>`;
+    interactiveList.insertAdjacentHTML('beforeend', newElem);
+})
+
