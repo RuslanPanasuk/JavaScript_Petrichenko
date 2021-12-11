@@ -30,3 +30,6 @@ adv.forEach(item => {
     item.remove();
 });
 
+const genre = document.querySelector('.promo__genre');
+
+genre.textContent = 'Драма';
